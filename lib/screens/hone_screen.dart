@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: TextField(
+              cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
                 fillColor: Colors.white,
@@ -69,6 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Theme.of(context).primaryColor,
                   onPressed: () {},
                 ),
+                
               ),
             ),
           ),
