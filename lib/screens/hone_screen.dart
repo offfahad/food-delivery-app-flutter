@@ -37,30 +37,39 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.all(20.0),
             child: TextField(
               decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
-                  fillColor: Colors.white,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                    borderSide: const BorderSide(width: 0.8),
+                contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
+                fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: const BorderSide(width: 0.8),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: BorderSide(
+                    width: 0.8,
+                    color: Theme.of(context).primaryColor,
                   ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                    borderSide: BorderSide(
-                      width: 0.8,
-                      color: Theme.of(context).primaryColor,
-                    ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                  borderSide: BorderSide(
+                    width: 0.8,
+                    color: Theme.of(context).primaryColor,
                   ),
-                  
-                  hintText: 'Search Food or Restaurants',
-                  prefixIcon: const Icon(
-                    Icons.search,
-                    size: 30.0,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: const Icon(Icons.clear),
-                    onPressed: () {},
-                  )),
+                ),
+                hintText: 'Search Food or Restaurants',
+                prefixIcon: Icon(
+                  Icons.search,
+                  size: 30.0,
+                  color: Theme.of(context).primaryColor,
+                ),
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.clear),
+                  color: Theme.of(context).primaryColor,
+                  onPressed: () {},
+                ),
+              ),
             ),
           ),
         ],
