@@ -12,6 +12,6 @@ class RatingStars extends StatelessWidget {
       stars += '⭐ ';
     }
     stars.trim();
-    return Text(stars, style: const TextStyle(fontSize: 24.0,),);
+    return Text(stars, style: const TextStyle(fontSize: 18.0,),);
   }
 }
