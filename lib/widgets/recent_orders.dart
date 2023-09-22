@@ -69,6 +69,7 @@ class RecentOrders extends StatelessWidget {
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
+                        
                       ],
                     ),
                   ),
@@ -116,7 +117,7 @@ class RecentOrders extends StatelessWidget {
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
-              padding: const EdgeInsets.only(left: 10.0, top: 7.0),
+              padding: const EdgeInsets.only(left: 10.0,),
               itemCount: currentUser.orders!.length,
               itemBuilder: (BuildContext context, int index) {
                 Order order = currentUser.orders![index];
