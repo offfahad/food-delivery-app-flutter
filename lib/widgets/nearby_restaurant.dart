@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:food_delivery/data/data.dart';
 import 'package:food_delivery/models/restaurant.dart';
@@ -19,7 +20,7 @@ class NearbyRestaurant extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           border: Border.all(
             width: 1.0,
-            color: Colors.grey,
+            color: Colors.deepOrangeAccent,
           ),
         ),
         child: Row(children: [

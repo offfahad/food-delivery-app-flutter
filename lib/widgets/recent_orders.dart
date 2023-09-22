@@ -14,7 +14,7 @@ class RecentOrders extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
         border: Border.all(
           width: 1.0,
-          color: Colors.grey,
+          color: Theme.of(context).primaryColor,
         ),
       ),
       child: Row(
