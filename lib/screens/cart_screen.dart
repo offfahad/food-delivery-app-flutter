@@ -130,6 +130,10 @@ class _CardScreenState extends State<CardScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double totalPrice = 0;
+    currentUser.cart!.forEach(
+        (Order? order) => totalPrice += order!.quantity! * order.food!.price!);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
@@ -138,10 +142,61 @@ class _CardScreenState extends State<CardScreen> {
         ),
       ),
       body: ListView.separated(
-        itemCount: currentUser.cart!.length,
+        itemCount: currentUser.cart!.length + 1,
         itemBuilder: (BuildContext context, int index) {
-          Order order = currentUser.cart![index];
-          return _buildCartItem(order);
+          if (index < currentUser.cart!.length) {
+            Order order = currentUser.cart![index];
+            return _buildCartItem(order);
+          }
+          return Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Estimated Delivery Time:',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      '25 min',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      'Total Cost:',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      '\$${totalPrice.toStringAsFixed(2)}',
+                      style: const TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 100.0,)
+              ],
+            ),
+          );
         },
         separatorBuilder: (BuildContext context, int index) {
           return const Divider(
@@ -149,6 +204,30 @@ class _CardScreenState extends State<CardScreen> {
             color: Colors.grey,
           );
         },
+      ),
+      bottomSheet: Container(
+        height: 100.0,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black26, offset: Offset(0, -1), blurRadius: 6.0)
+          ],
+        ),
+        child: Center(
+            child: TextButton(
+          child: const Text(
+            'CHECKOUT',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 22.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
+          ),
+          onPressed: () {},
+        )),
       ),
     );
   }
