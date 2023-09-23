@@ -17,11 +17,14 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
       body: Column(children: [
         Stack(
           children: [
-            Image(
-              height: 220.0,
-              width: MediaQuery.of(context).size.width,
-              image: AssetImage(widget.restaurant!.imageUrl ?? ''),
-              fit: BoxFit.cover,
+            Hero(
+              tag: widget.restaurant!.imageUrl ?? '',
+              child: Image(
+                height: 220.0,
+                width: MediaQuery.of(context).size.width,
+                image: AssetImage(widget.restaurant!.imageUrl ?? ''),
+                fit: BoxFit.cover,
+              ),
             ),
             Padding(
               padding:

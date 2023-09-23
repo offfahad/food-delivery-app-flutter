@@ -35,11 +35,14 @@ class NearbyRestaurant extends StatelessWidget {
           child: Row(children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
-              child: Image(
-                width: 150.0,
-                height: 150.0,
-                image: AssetImage(restaurants.imageUrl ?? ''),
-                fit: BoxFit.cover,
+              child: Hero(
+                tag: restaurants.imageUrl ?? '',
+                child: Image(
+                  width: 150.0,
+                  height: 150.0,
+                  image: AssetImage(restaurants.imageUrl ?? ''),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Container(
