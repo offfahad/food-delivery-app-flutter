@@ -1,16 +1,14 @@
-# food_delivery
+# Food Delivery App UI Design Flutter
 
-A new Flutter project.
+This project is a food delivery app built with Flutter that allows users to browse and order food from various restaurants. This README provides an overview of the app's features, installation instructions, and how to contribute to the project.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Home Screen**: Displays user orders and a list of different restaurants.
+- **Cart Screen**: Shows items in the cart with the total bill.
+- **Restaurant Details Screen**: Provides detailed information about a selected restaurant and its menu.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
