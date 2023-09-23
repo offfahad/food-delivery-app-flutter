@@ -1,6 +1,6 @@
 # Food Delivery App UI Design Flutter
 
-This project is a food delivery app built with Flutter that allows users to browse and order food from various restaurants. This README provides an overview of the app's features, installation instructions, and how to contribute to the project.
+This project is a food delivery app built with Flutter that allows users to browse and order food from various restaurants. 
 
 ## Features
 
@@ -14,4 +14,11 @@ This project is a food delivery app built with Flutter that allows users to brow
 ![restaurnat_detail](https://github.com/offfahad/food-delivery-app-ui-flutter/assets/19569802/1e926036-f1f2-457b-b1c7-ee8d70ad411d)
 ![cart](https://github.com/offfahad/food-delivery-app-ui-flutter/assets/19569802/fad9823a-6c80-475f-8db1-f4baa6d9c3c9)
 
+## Contribute
+
+You can add the design functionality of signing and registring and also can work on the backend.
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact us at mughalfahad544@gmail.com
 
