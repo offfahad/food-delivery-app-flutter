@@ -10,5 +10,8 @@ This project is a food delivery app built with Flutter that allows users to brow
 
 ## Screenshots
 
+![home](https://github.com/offfahad/food-delivery-app-ui-flutter/assets/19569802/8cef3513-2b1d-46dd-bf9b-c9efb74f4def)
+![restaurnat_detail](https://github.com/offfahad/food-delivery-app-ui-flutter/assets/19569802/1e926036-f1f2-457b-b1c7-ee8d70ad411d)
+![cart](https://github.com/offfahad/food-delivery-app-ui-flutter/assets/19569802/fad9823a-6c80-475f-8db1-f4baa6d9c3c9)
 
 
