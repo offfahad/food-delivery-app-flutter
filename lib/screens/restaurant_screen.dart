@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/models/food.dart';
 import 'package:food_delivery/models/restaurant.dart';
 import 'package:food_delivery/widgets/rating_stars.dart';
 
@@ -136,7 +137,38 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ),
               ),
             ],
-          )
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          const Center(
+            child: Text(
+              'Menu',
+              style: TextStyle(
+                fontSize: 22.0,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 1.2,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          Expanded(
+            child: GridView.count(
+              padding: const EdgeInsets.all(10.0),
+              crossAxisCount: 2,
+              children: List.generate(
+                widget.restaurant!.menu!.length,
+                (index) {
+                  Food food = widget.restaurant!.menu![index];
+                  return Center(
+                    child: Text(food.name!),
+                  );
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );
