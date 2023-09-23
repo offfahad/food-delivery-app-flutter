@@ -112,10 +112,13 @@ class _CardScreenState extends State<CardScreen> {
                     ),
                   ),
                 ),
-                Text(
-                  '\$${order.quantity! * order.food!.price!.toDouble()}',
-                  style: const TextStyle(
-                      fontSize: 16.0, fontWeight: FontWeight.w600),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  child: Text(
+                    '\$${order.quantity! * order.food!.price!.toDouble()}',
+                    style: const TextStyle(
+                        fontSize: 16.0, fontWeight: FontWeight.w600),
+                  ),
                 )
               ],
             ),
