@@ -1,6 +1,7 @@
 # Food Delivery App UI Design Flutter
 
 This project is a food delivery app built with Flutter that allows users to browse and order food from various restaurants. 
+It covers almost all most usable widgets to learn the flutter.
 
 ## Features
 
