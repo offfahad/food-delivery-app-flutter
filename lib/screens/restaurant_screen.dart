@@ -13,6 +13,26 @@ class RestaurantScreen extends StatefulWidget {
 }
 
 class _RestaurantScreenState extends State<RestaurantScreen> {
+  _buildMenuItem(Food? menuItem) {
+    return Center(
+      child: Stack(
+        children: [
+          Container(
+            height: 175.0,
+            width: 175.0,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(menuItem!.imageUrl!),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,9 +182,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 widget.restaurant!.menu!.length,
                 (index) {
                   Food food = widget.restaurant!.menu![index];
-                  return Center(
-                    child: Text(food.name!),
-                  );
+                  return _buildMenuItem(food);
                 },
               ),
             ),
